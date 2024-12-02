@@ -4,9 +4,9 @@ target = 5
 
 def findElementIndex(target, arr, start=None, end=None):
 
-    low_index = start if start else 0
-    high_index = end if end else len(arr) - 1
-    mid_index = low_index + high_index // 2
+    low_index = start if start is not None else 0
+    high_index = end if end is not None else len(arr) - 1
+    mid_index = (low_index + high_index) // 2
 
     if low_index > high_index:
         return -1
